@@ -2,6 +2,7 @@ require 'csv'
 
 class StemCell < ApplicationRecord
   def self.import
+    StemCell.delete_all
     list = []
     CSV.foreach("db/data/stem_cells_data.csv", headers: true) do |row|
       list << {name: row["name"], differenciation: row["differenciation"]}
