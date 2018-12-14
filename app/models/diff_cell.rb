@@ -1,0 +1,2 @@
+class DiffCell < ApplicationRecord
+end
