@@ -10,22 +10,22 @@ var myfunc = function(num){
   switch (num) {
     case 1:
         stem_cells_data.stems.blood.forEach( function(blood){
-            text += `<a>${blood.differenciation}</a>`;
+            text += `<a class="diff-cell">${blood.differenciation}</a>`;
         })
         break;
     case 2:
         stem_cells_data.stems.mesenchynal.forEach( function(mesenchynal){
-            text += `<a>${mesenchynal.differenciation}</a>`;
+            text += `<a class="diff-cell">${mesenchynal.differenciation}</a>`;
         })
         break;
     case 3:
         stem_cells_data.stems.hepatic.forEach( function(hepatic){
-            text += `<a>${hepatic.differenciation}</a>`;
+            text += `<a class="diff-cell">${hepatic.differenciation}</a>`;
         })
         break;
     case 4:
         stem_cells_data.stems.pancreatic.forEach( function(pancreatic){
-            text += `<a>${pancreatic.differenciation}</a>`;
+            text += `<a class="diff-cell">${pancreatic.differenciation}</a>`;
         })
         break;
   }
