@@ -4,26 +4,26 @@ $(function() {
   })
 })
 
-var myfunc = function(num){
-  var result = document.getElementById("result");
-  var text = ``;
+const show_diff_cells = function(num){
+  let result = document.getElementById("result");
+  let text = ``;
   switch (num) {
-    case 1:
+    case `blood`:
         stem_cells_data.stems.blood.forEach( function(blood){
             text += `<a class="diff-cell">${blood.differenciation}</a>`;
         })
         break;
-    case 2:
+    case `mesenchynal`:
         stem_cells_data.stems.mesenchynal.forEach( function(mesenchynal){
             text += `<a class="diff-cell">${mesenchynal.differenciation}</a>`;
         })
         break;
-    case 3:
+    case `hepatic`:
         stem_cells_data.stems.hepatic.forEach( function(hepatic){
             text += `<a class="diff-cell">${hepatic.differenciation}</a>`;
         })
         break;
-    case 4:
+    case `pancreatic`:
         stem_cells_data.stems.pancreatic.forEach( function(pancreatic){
             text += `<a class="diff-cell">${pancreatic.differenciation}</a>`;
         })

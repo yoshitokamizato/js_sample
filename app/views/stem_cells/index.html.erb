@@ -1,12 +1,13 @@
 <section id="stem-cell">
   <div class="search-button">
     <h1>Stem Cell</h1>
-    <a id="blood" onclick="myfunc(1)" >造血幹細胞</a>
-    <a id="blood" onclick="myfunc(2)" >間葉系幹細胞</a>
-    <a id="blood" onclick="myfunc(3)" >肝幹細胞</a>
-    <a id="blood" onclick="myfunc(4)" >膵幹細胞</a>
+    <a id="blood" onclick="show_diff_cells('blood')" >造血幹細胞</a>
+    <a id="blood" onclick="show_diff_cells('mesenchynal')" >間葉系幹細胞</a>
+    <a id="blood" onclick="show_diff_cells('hepatic')" >肝幹細胞</a>
+    <a id="blood" onclick="show_diff_cells('pancreatic')" >膵幹細胞</a>
   </div>
   <div class="result-container">
+    <h2>Diff Cell</h2>
     <div id="result"></div>
   </div>
 </section>
