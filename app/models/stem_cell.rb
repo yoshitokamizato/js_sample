@@ -15,6 +15,8 @@ class StemCell < ApplicationRecord
   def self.category
     blood = StemCell.where(name: "造血幹細胞")
     mesenchynal = StemCell.where(name: "間葉系幹細胞")
-    {blood: blood, mesenchynal: mesenchynal}
+    hepatic = StemCell.where(name: "肝幹細胞")
+    pancreatic = StemCell.where(name: "膵幹細胞")
+    {blood: blood, mesenchynal: mesenchynal, hepatic: hepatic, pancreatic: pancreatic}
   end
 end

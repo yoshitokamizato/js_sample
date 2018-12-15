@@ -1,7 +1,6 @@
 $(function() {
   $.getJSON('/stem_cells/data', function(json) {
     stem_cells_data = json;
-    console.log(stem_cells_data);
   })
 })
 
@@ -15,15 +14,19 @@ var myfunc = function(num){
         })
         break;
     case 2:
-        stem_cells_data.stems.mesenchynal.forEach( function(blood){
-            text += `<a>${blood.differenciation}</a>`;
+        stem_cells_data.stems.mesenchynal.forEach( function(mesenchynal){
+            text += `<a>${mesenchynal.differenciation}</a>`;
         })
         break;
     case 3:
-        text += '<a>肝細胞</a>';
+        stem_cells_data.stems.hepatic.forEach( function(hepatic){
+            text += `<a>${hepatic.differenciation}</a>`;
+        })
         break;
     case 4:
-        text += '<a>膵ベータ細胞</a>';
+        stem_cells_data.stems.pancreatic.forEach( function(pancreatic){
+            text += `<a>${pancreatic.differenciation}</a>`;
+        })
         break;
   }
   result.innerHTML = text;
