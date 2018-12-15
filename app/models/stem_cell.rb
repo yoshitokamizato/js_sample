@@ -11,4 +11,10 @@ class StemCell < ApplicationRecord
   rescue => e
     puts "インポート失敗 #{e}"
   end
+
+  def self.category
+    blood = StemCell.where(name: "造血幹細胞")
+    mesenchynal = StemCell.where(name: "間葉系幹細胞")
+    {blood: blood, mesenchynal: mesenchynal}
+  end
 end
